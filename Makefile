@@ -239,6 +239,10 @@ ifeq ($(DEBUG_GLSL_PREPROCESSOR),1)
 CFLAGS += -DDEBUG_GLSL_PREPROCESSOR
 endif
 
+ifeq ($(FOR_VML),1)
+CFLAGS += -fno-optimize-sibling-calls
+endif
+
 CXXFLAGS  = $(CFLAGS) -fexceptions -std=gnu++11 -Wno-write-strings
 
 all: $(TARGET).a
