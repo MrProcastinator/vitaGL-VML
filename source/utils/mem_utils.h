@@ -29,7 +29,7 @@
 // Debug flags
 //#define DEBUG_GC // Enable this to enable logging for the garbage collector
 
-#ifdef NO_CLIB
+#ifdef DISABLE_CLIB
 #define vgl_memset memset
 #define vgl_fast_memcpy memcpy
 #else
